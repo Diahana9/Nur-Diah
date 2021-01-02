@@ -82,73 +82,6 @@
 		clear: both;
 		display: table;
 	}
-	.line{
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		margin: 50px;
-	}
-	.col{
-		flex-basis: 50%;
-		min-width: 250px;
-	}
-	.feature-img{
-		width: 83%;
-		margin: auto;
-		position: relative;
-		border-radius: 6px;
-		overflow: hidden;
-	}
-	.small-img-row{
-		display: flex;
-		background: #efefef;
-		margin: 20px 50px;
-		align-items: center;
-		border-radius: 6px;
-		overflow: hidden;
-		width: 85%;
-	}
-	.small-img{
-		position: relative;
-	}
-	.small-img img{
-		width: 150px;
-	}
-	.small-img-row p{
-		margin-left: 20px;
-		color: #707070;
-		line-height: 22px;
-		font-size: 15px;
-	}
-	.play-btn{
-		width: 60px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		cursor: pointer;
-	}
-	.small-img .play-btn{
-		width: 35px;
-	}
-	.video-player{
-		width: 80%;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		display: none;
-	}
-	video:focus{
-		outline: none;
-	}
-	.close-btn{
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		width: 30px;
-		cursor: pointer;
-	}
 	</style>
 </head>
 <body>
@@ -250,61 +183,13 @@
 	
 <div class="container-fluid bg-2 text-center">
 	<h3 id="Video" class="margin"> Video</h3>
-	<div class="line">
-		<div class="col">
-			<div class="feature-img">
-				<img src="Media/Thumbnail1.png" width="100%">
-				<img src="Media/Play.png" class="play-btn" onclick="playVideo(Media/Video1.mp4)">
-			</div>
-		</div>
-		<div class="col">
-			<div class="small-img-row">
-				<div class="small-img">
-					<img src="Media/Thumbnail2.png">
-					<img src="Media/Play.png" class="play-btn" onclick="playVideo(Media/Video2.mp4)">
-				</div>
-				<p>Muslim Fashion Festival 2020</p>
-			</div>
-			<div class="small-img-row">
-				<div class="small-img">
-					<img src="Media/Thumbnail3.png">
-					<img src="Media/Play.png" class="play-btn" onclick="playVideo(Media/Video3.mp4)">
-				</div>
-				<p>How to Look Expensive on a Budget</p>
-			</div>
-			<div class="small-img-row">
-				<div class="small-img">
-					<img src="Media/Thumbnail4.png">
-					<img src="Media/Play.png" class="play-btn" onclick="playVideo(Media/Video4.mp4)">
-				</div>
-				<p>Natural Glam Makeup Tutorial</p>
-			</div>
-		</div>
-	</div>
+	<p>Modest Fashion Hacks Every Girl Should Know!</p>
+	<figure id="video_player">
+		<video controls width="700px">
+			<source src="Media/Video1.mp4" type="video/mp4">
+		</video>
+	</figure>
 </div>
-
-<div class="video-player" id="videoPlayer">
-	<video width="100%" controls autoplay>
-		<source src="Media/Video1.mp4" type="video/mp4" id="myVideo">
-	</video>
-	<img src="Media/Close.png" class="close-btn" onclick="stopVideo()">
-</div>
-
-<script>
-	var videoPlayer = document.getElementById("videoPlayer");
-	var myVideo = document.getElementById("myVideo");
-	
-	function stopVideo(){
-		
-		videoPlayer.style.display = "none";
-		
-	}
-	
-	function playVideo(file){
-		myVideo.src = file;
-		videoPlayer.style.display = "block";
-	}
-</script>
 
 <footer class="container-fluid bg-4 text-center">
 	<p>Check me out on Instagram <a href="https://instagram.com/diahana9?igshid=oxuox6s1fwot">@diahana9</a></p>
@@ -315,7 +200,3 @@
 
 </body>
 </html>
-
-	
-	
-	
